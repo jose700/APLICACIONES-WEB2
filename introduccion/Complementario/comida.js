@@ -11,9 +11,9 @@ function mostrar() {
     let i = 0;
     do {
         i = i + 1;
-    } while (i <= 5);
+    } while (i <= 4);
 
-    console.log(`${comida[0]} ${comida[1]}${comida[2]}${comida[3]}`);
+     console.log(`${comida[0]} ${comida[1]} ${comida[2]} ${comida[3]}`);
     //
 }
 mostrar();
