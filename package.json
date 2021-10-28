@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "node introduccion/conexion.js",
-        "dev": "nodemon introduccion/conexion.js"
+        "dev": "nodemon mongodb-03/conexion.js"
     },
     "keywords": [],
     "author": "",
