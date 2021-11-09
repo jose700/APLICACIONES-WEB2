@@ -1,7 +1,7 @@
 const axios = require('axios').default;
-const cheerio = require('cheerio');
-const mongoose = require('mongoose');
-const cron = require('node-cron');
+const cheerio = require('cheerio')
+const mongoose = require('mongoose')
+const cron = require('node-cron')
 
 const { MONGO_URI } = require('./config');
 const { Noticias } = require('./models');
@@ -23,14 +23,14 @@ cron.schedule("* * * * *", async() => {
         let arregloNoticias = [];
         //recorrer los nodos 
         titulos.each((index, element) => {
-            const Noticia = {
-                titulo: $(element).text().toString(),
-                enlace: $(element).children().attr("href")
-            };
-            arregloNoticias = [...arregloNoticias, Noticia];
+                const Noticia = {
+                    titulo: $(element).text().toString(),
+                    enlace: $(element).children().attr("href")
+                }
+                arregloNoticias = [...arregloNoticias, Noticia];
 
-        });
-        //Agregar en la base de datos
+            })
+            //Agregar en la base de datos
         await Noticias.create(arregloNoticias);
     } catch (err) {
         console.log(err);

@@ -3,15 +3,12 @@ const { Schema } = mongoose;
 
 
 
-const NoticiaSchema = new Schema(
-    {
-        titulo: { type: String },
-        enlace: { type: String },
-    },
-    {
-        timestamps: { createdAt: true, updatedAt: true }
-    }
-);
+const NoticiaSchema = new Schema({
+    titulo: { type: String },
+    enlace: { type: String },
+}, {
+    timestamps: { createdAt: true, updatedAt: true }
+});
 
 
 
