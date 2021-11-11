@@ -1,15 +1,15 @@
 const fs = require("fs");
 const http = require("http");
 
-const cors = require("cors")
+const cors = require("cors");
 const express = require("express");
 const path = require("path");
 
 const PUERTO = 8080;
-const indice = fs.readFileSync("./index.html")
-const acercade = fs.readFileSync("./about.html")
-const error = fs.readFileSync("./error.html")
-const urlError = path.join(__dirname, "./error.html")
+const indice = fs.readFileSync("./index.html");
+const acercade = fs.readFileSync("./about.html");
+const error = fs.readFileSync("./error.html");
+const urlError = path.join(__dirname, "./error.html");
 
 
 const server = express();
@@ -24,7 +24,7 @@ server.get('/about', (req, res) => {
         respuesta: "ok"
     });
 
-})
+});
 
 // server.use((req,res,next)=>{
 //     res.status(400).sendFile(urlError);
@@ -37,8 +37,8 @@ function findex(req, response) {
 
 
 server.listen(PUERTO, () => {
-    console.log(`Servidor ejecutando http://localhost:${PUERTO}`)
-})
+    console.log(`Servidor ejecutando http://localhost:${PUERTO}`);
+});
 
 // http.createServer((req, res)=>{
 //     if (req.url==="/")
