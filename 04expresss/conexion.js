@@ -1,6 +1,5 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
-const verify = require('jsonwebtoken/verify');
 const app = express();
 
 
