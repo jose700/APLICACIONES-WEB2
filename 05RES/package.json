@@ -1,11 +1,11 @@
 {
-    "name": "04expresss",
+    "name": "05res",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "nodemon index.js",
-        "start": "nodemon conexion.js"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon index.js"
     },
     "keywords": [],
     "author": "",
@@ -13,8 +13,6 @@
     "dependencies": {
         "cors": "^2.8.5",
         "express": "^4.17.1",
-        "jsonwebtoken": "^8.5.1",
-        "mongodb": "^4.1.4",
-        "nodemon": "^2.0.14"
+        "nodemon": "^2.0.15"
     }
 }
