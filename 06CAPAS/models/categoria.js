@@ -1,40 +1,17 @@
-const { Schema, model } = require('mongoose');
+const {Schema, model} =  require('mongoose');
+
 
 const CategoriaSchema = Schema({
-    nombre: {
-        type: String,
-        required: [true, 'El nombre es obligatorioa'],
+    nombre:{
+        type:String,
+        required: [ true, 'El nombre es obligatorio'],
         unique: true
     },
-    estado: {
+    estado:{
         type: Boolean,
         default: true,
-        required: [true, 'El estado es obligatorio'],
+        required:true
     },
-    precio: {
-        type: Number,
-        default: 0,
-    },
-    costo: {
-        type: Number,
-        default: 0,
-    },
-    minimo: {
-        type: Number,
-        default: 0,
-    },
-});
+})
 
-CategoriaSchema.methods.toJSON = function() {
-    //const { nombre, precio, costo } = this.toObject();
-    const { __v, estado, ...data } = this.toObject();
-
-    // si se dedea incuir una propiedad en el objeto
-    //return {__v, estado, ....data} 
-    return data;
-};
-
-
-
-
-module.exports = model('Producto', CategoriaSchema);
+module.exports= model('Categoria', CategoriaSchema)
