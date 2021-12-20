@@ -2,6 +2,6 @@ open cd parcial2
 open cd complementario
 execute npm install for installed the dependency of node_modules
 execute:
-docker run -p 9000:9000 -v D:\SEXTOSEMESTRE\WEB2\EJERCICIOS\PARCIAL2\Complementario\:/var/www -w "/var/www" node npm star/www -w "/var/www" node npm start
+docker-compose up --build
 
 for execute the program in the server is open localhost:9000 in the browser
