@@ -1,0 +1,35 @@
+{
+    "name": "chatboot",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon app.js",
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Victorjrtoby40/Chatboot.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Victorjrtoby40/Chatboot/issues"
+    },
+    "homepage": "https://github.com/Victorjrtoby40/Chatboot#readme",
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "moment": "^2.29.1",
+        "mongoose": "^6.0.13",
+        "qrcode-terminal": "^0.12.0",
+        "sharp": "^0.29.3",
+        "whatsapp-web.js": "^1.15.1"
+    }
+}

@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  obtener:
+    build: .
+    depends_on:
+      - mongo
+    environment:
+      - PORT=9000
+      - MONGODB_URI=mongodb://mongo:27017/base_uleam
+    ports:
+      - "9000:9000"
+  mongo:
+    image: mongo
