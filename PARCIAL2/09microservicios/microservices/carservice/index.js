@@ -1,5 +1,6 @@
-const server = require('./src/app');
+const server = require("./src/app");
+
 
 server.listen(process.env.PORT, () => {
-    console.log(`Cars running on port ${process.env.PORT}`);
-});
+    console.log(`Car Service started .... `)
+})
