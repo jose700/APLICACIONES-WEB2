@@ -4,9 +4,6 @@ const cors = require('cors');
 
 const { dbConnection } = require('./database/config');
 
-
-
-
 class Server {
     constructor() {
             this.app = express.Router();
@@ -15,7 +12,7 @@ class Server {
             this.port = process.env.PORT;
 
             this.paths = {
-                productos: '/api/productos',
+                sistemas: '/api/sistemas',
                 grupos: '/api/grupos',
                 categorias: '/api/categorias'
             };
@@ -42,7 +39,7 @@ class Server {
 
     }
     routes() {
-        this.app.use(this.paths.productos, require('./routes/productos'));
+        this.app.use(this.paths.sistemas, require('./routes/sistemas'));
         this.app.use(this.paths.categorias, require('./routes/categorias'));
 
     }
