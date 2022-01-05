@@ -20,6 +20,14 @@ window.addEventListener('load', function() {
     htmlGenerado += `<button id="btneliminar" class="btn btn-danger">eliminar</button>`;
     htmlGenerado += `<br>`;
     htmlGenerado += `<br>`;
+    htmlGenerado += `<select class="btn btn-outline-dark">
+    <option selected>Seleccione el tipo de usuario</option>
+    <option value="1">Administrador</option>
+    <option value="2">Invitado</option>
+    <option value="3">Gestiòn</option>
+  </select>`;
+    htmlGenerado += `<br>`;
+    htmlGenerado += `<br>`;
     htmlGenerado += `<div id="divcontenido"></div>`;
     htmlCuerpo.innerHTML = htmlGenerado;
 
@@ -82,7 +90,7 @@ window.addEventListener('load', function() {
                 for (const elemento in consulta.sistemas) {
                     const actual = consulta.sistemas[elemento];
                     tabla += `<tr class="row row-cols-4">`;
-                    tabla += `<td class="col"> <button class='actualizar btn btn-warning btn-block' value='${actual._id}' > ${ actual.nombre  } </button> </td>`;
+                    tabla += `<td class="col"> <button class='actualizar btn btn-warning d-grid gap-2 d-md-block' value='${actual._id}' > ${ actual.nombre  } </button> </td>`;
                     tabla += `<td> <span>Apellidos</span>: ${ actual.apellido  } </td>`;
                     tabla += `<td> <span>Curso</span>:${ actual.curso  }</td>`;
                     tabla += `<td><span>Edad</span>:${ actual.edad  }</td>`;
