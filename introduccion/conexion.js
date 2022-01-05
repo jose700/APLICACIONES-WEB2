@@ -12,14 +12,14 @@ mongoose.connect('mongodb://localhost/prueba').then(db => (
 )).catch(err => console.log('error de conexion', err));
 
 // modelo
-const Usuario = mongoose.model("Usuario",{nombre:String});
-const Usuario1 = new Usuario({nombre:"Josè"});
+const Usuario = mongoose.model("Usuario", { nombre: String });
+const Usuario1 = new Usuario({ nombre: "Josè" });
 Usuario1.save();
 
 // consultar el dato añadido en la db
 
 Usuario.find().then(console.log)
-// configuracion de las vistas
+    // configuracion de las vistas
 app.set('views', path.join(__dirname, 'view'));
 app.set('views engine', 'ejs');
 
