@@ -8,15 +8,18 @@ router.post('/user/operar', (req, res, next) => {
 
     if (req.body._id === "") {
         axios.post(`http://localhost:5000/v1/pruebas/api/users`, {
-
-            rol: req.body.rol,
+            administrador: req.body.administrador,
+            invitado: req.body.invitado,
+            gestion: req.body.gestion,
         }).then(respuesta => {
             res.redirect('/');
         });
 
     } else {
         axios.put(`http://localhost:5000/v1/pruebas/api/users/${req.body._id}`, {
-            rol: req.body.rol,
+            administrador: req.body.administrador,
+            invitado: req.body.invitado,
+            gestion: req.body.gestion,
         }).then(respuesta => {
             res.redirect('/');
         });

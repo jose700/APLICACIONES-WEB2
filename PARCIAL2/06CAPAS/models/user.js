@@ -2,9 +2,6 @@ const { Schema, model } = require('mongoose');
 
 
 const UserSchema = Schema({
-    rol: {
-        type: String,
-    },
     administrador: {
         type: String,
 
