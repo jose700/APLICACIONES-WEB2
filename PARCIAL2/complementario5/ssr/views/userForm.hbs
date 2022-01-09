@@ -1,0 +1,17 @@
+<div class="container">
+<form action="/userForm/user/operar" method="post"></form>
+    <br>
+    <input type="hidden" name="_id" value="{{user._id}}">
+    <div class="form-group">
+        <select class="form-select bg-dark">
+            <option>Seleccione el tipo de usuario</option>
+            <option  id="administrador" name="user-adminstrador" value="{{user.administrador}}">Administrador</option>
+            <option  id="invitado" name="user-invitado" value="{{user.invitado}}">Invitado</option>
+            <option  id="gestion" name="user-gestion" value="{{user.gestion}}">Gestion</option>
+
+        </select>
+      <button type="submit"  class="btn btn-primary">Grabar</button>   
+    </div>
+</form>
+</div>
+
